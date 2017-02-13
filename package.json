@@ -5,5 +5,13 @@
   "main": "index.js",
   "repository": {},
   "author": "Sebastian Muszynski",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "lint": "standard",
+    "build": "webpack js/ClientApp.js public/bundle.js"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
 }
