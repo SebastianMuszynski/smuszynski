@@ -1,0 +1,9 @@
+{
+  "name": "smuszynski",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "repository": {},
+  "author": "Sebastian Muszynski",
+  "license": "MIT"
+}
