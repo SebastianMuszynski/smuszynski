@@ -6,8 +6,19 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+  resolve: {
+    extensions: ['.js', '.json', '.css', '.scss']
+  },
   module: {
     rules: [
+      {
+        test: /\.?css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ],
+      },
       {
         test: /\.js?$/,
         exclude: /node_modules/,
