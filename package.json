@@ -8,17 +8,19 @@
   "license": "MIT",
   "scripts": {
     "lint": "standard",
-    "build": "webpack",
     "dev": "webpack-dev-server",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "build": "webpack --config webpack.config.js --progress --colors",
+    "start": "node app.js",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "clipboard-js": "^0.3.3",
+    "express": "^4.14.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "reset-css": "^2.2.0"
-  },
-  "devDependencies": {
+    "reset-css": "^2.2.0",
+    "webpack": "^2.2.1",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.8",
@@ -27,8 +29,9 @@
     "css-loader": "^0.26.1",
     "node-sass": "^4.5.0",
     "sass-loader": "^6.0.0",
-    "style-loader": "^0.13.1",
-    "webpack": "^2.2.1",
+    "style-loader": "^0.13.1"
+  },
+  "devDependencies": {
     "webpack-dev-server": "^2.3.0"
   }
 }
