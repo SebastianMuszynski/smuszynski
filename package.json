@@ -8,7 +8,9 @@
   "license": "MIT",
   "scripts": {
     "lint": "standard",
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "watch": "webpack --watch"
   },
   "dependencies": {
     "react": "^15.4.2",
@@ -24,6 +26,7 @@
     "node-sass": "^4.5.0",
     "sass-loader": "^6.0.0",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
   }
 }
