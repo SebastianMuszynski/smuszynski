@@ -1,0 +1,11 @@
+{
+  "name": "Sebastian Muszynski",
+  "description": "Full-Stack Web Developer",
+  "email": {
+    "address": "muszynski.sebastian@gmail.com",
+    "notification": {
+      "copyMsgBefore": "Click to copy my e-mail.",
+      "copyMsgAfter": "Copied, now say hello! :)"
+    }
+  }
+}

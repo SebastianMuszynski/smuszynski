@@ -29,22 +29,32 @@
 .SocialIcons {
   @include center-absolute;
 
-  &__linkedin {
+  &__twitter,
+  &__github,
+  &__linkedin,
+  &__email {
     position: relative;
     top: 6rem;
     width: 3rem;
     transition: .3s transform;
-    animation: icon-anim 2s ease infinite;
+    margin: 1rem;
 
     &:hover {
-      width: 3.5rem;
-      transform: rotateZ(-15deg);
+      transform: rotateZ(-60deg);
     }
+  }
 
-    @keyframes icon-anim {
-      50% {
-        margin-top: -0.6rem;
-      }
-    }
+  &__email-notification {
+    background-color: $color-description;
+    border-radius: 0.5rem 0.5rem 0.5rem 0;
+    color: white;
+    display: none;
+    width: 12rem;
+    height: 2rem;
+    line-height: 2;
+    text-align: center;
+    position: absolute;
+    left: 19.8rem;
+    top: 5rem;
   }
 }
