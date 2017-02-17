@@ -1,31 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import clipboard from 'clipboard-js'
-import css from '../css/HomePage'
+import IconEmail from './IconEmail'
 import data from '../data/en'
+import '../css/HomePage'
 
 const HomePage = React.createClass({
-  componentDidMount() {
-    this.refs.iconEmail.addEventListener('mouseenter', this.showEmailNotification)
-    this.refs.iconEmail.addEventListener('mouseleave', this.hideEmailNotification)
-  },
-  setEmailNotification (msg) {
-    this.refs.iconEmailNotifcation.innerHTML = msg
-  },
-  showEmailNotification () {
-    this.refs.iconEmailNotifcation.style.display = 'inline-block'
-  },
-  hideEmailNotification () {
-    this.refs.iconEmailNotifcation.style.display = 'none'
-    this.setEmailNotification(data.email.notification.copyMsgBefore)
-  },
-  updateEmailNotification () {
-    this.setEmailNotification(data.email.notification.copyMsgAfter)
-  },
-  copyEmailAddress (event) {
-    event.preventDefault()
-    clipboard.copy(data.email.address).then(this.updateEmailNotification)
-  },
   render () {
     return (
       <div className='HomePage'>
@@ -43,12 +22,7 @@ const HomePage = React.createClass({
           <a href='https://github.com/SebastianMuszynski' target='blank'>
             <img className='SocialIcons__github' src='../img/icon-github.png' alt='GitHub' />
           </a>
-          <a href='#' onClick={this.copyEmailAddress}>
-            <div ref='iconEmailNotifcation' className='SocialIcons__email-notification'>
-              { data.email.notification.copyMsgBefore }
-            </div>
-            <img ref='iconEmail' className='SocialIcons__email' src='../img/icon-email.png' alt='E-mail' />
-          </a>
+          <IconEmail data={data} />
         </div>
       </div>
     )
