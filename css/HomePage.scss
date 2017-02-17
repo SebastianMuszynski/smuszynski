@@ -1,0 +1,54 @@
+@import 'base';
+@import 'mixins';
+
+.HomePage {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+.Introduction {
+  @include center-absolute;
+  margin-top: -5rem;
+
+  &__name {
+    font-size: 4.5rem;
+    text-align: center;
+    color: #456;
+
+    &:hover {
+      color: #456;
+    }
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    text-align: center;
+    position: relative;
+    bottom: -2rem;
+    color: #C94378;
+  }
+}
+
+.SocialIcons {
+  @include center-absolute;
+
+  &__linkedin {
+    position: relative;
+    top: 6rem;
+    width: 3rem;
+    animation: icon-anim 2s ease infinite;
+    transition: .3s transform;
+
+    &:hover {
+      width: 3.5rem;
+      transform: rotateZ(-15deg);
+    }
+  }
+}
+
+@keyframes icon-anim {
+  50% {
+    margin-top: -0.6rem;
+  }
+}
